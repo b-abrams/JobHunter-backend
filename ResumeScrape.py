@@ -6,7 +6,7 @@ from pdfminer.pdfinterp import PDFPageInterpreter
 from pdfminer.pdfinterp import PDFResourceManager
 from pdfminer.pdfpage import PDFPage
 
-def scrapeResumeDocx(file):
+def scrapeResume(file):
   if(file[(len(file) - 4):] == "docx"):
     document = docx.Document(file)
     docText = []
