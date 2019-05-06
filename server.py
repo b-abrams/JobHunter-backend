@@ -4,8 +4,8 @@ app = Flask(__name__)
 
 # Get request. Must take in a parameter 'search' which denotes a job search query. 
 # Returns the results of search parameter from JobSearch.py
-@app.route("/", methods=["GET"])
-def serve():
+@app.route("/search", methods=["GET"])
+def serveJobs():
     req = request.args.get("search")
     jsonList = []
     for _ in list(JobSearch.execute(req)):
